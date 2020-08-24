@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Four Page
+        </title>
+        <script type="text/javascript">
+            function fun(){
+                var select=document.getElementById("abc");
+                alert(select.options[select.selectedIndex].value);
+            }
+        </script>       
+    </head>
+    <body>
+        <select id="abc">
+            <option id="sub1" value="C++" >C++</option><br>
+            <option id="sub2" value="Java" >Java</option><br>
+            <option id="sub3" value="Python" >Python</option><br>
+        </select>
+        <button id="btn" onclick="fun()">See Result</button>
+    </body>
+</html>

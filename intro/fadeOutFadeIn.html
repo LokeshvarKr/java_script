@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>FadeOut FadeIn in javascript</title>
+        <script type="text/javascript">
+           var opacity=0; // opacity ---> [0,1]
+           var intervalID=0;
+           function fade_out(){
+                var img=document.getElementById("img1");
+                opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity>0.4){
+                    opacity=opacity-0.1;
+                    img.style.opacity=opacity;
+                    console.log(opacity);
+                }
+                else{
+                    clearInterval(intervalID);
+                }
+            }
+           function fadeOut(){
+                intervalID=setInterval(fade_out,500);                
+           }
+           function fade_in(){
+                var img=document.getElementById("img1");
+                opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity<1){
+                    opacity=opacity+0.1;
+                    img.style.opacity=opacity;
+                    console.log(opacity);
+                }
+                else{
+                    clearInterval(intervalID);
+                }
+            }
+           function fadeIn(){
+                setInterval(fade_in,500);
+           }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="fadeOut()">FadeOut</button>
+        <br>
+        <img id="img1" src="image/google.png" width="200px"/>
+        <br>
+        <button onclick="fadeIn()">FadeIn</button>
+    </body>
+</html>

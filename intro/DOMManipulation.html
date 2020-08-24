@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Second Page
+        </title>
+        <script type="text/javascript">
+            function button_click(){
+                // document.getElementById("p1").innerHTML="This is paragraph AFTER clicking button";
+                var x=document.getElementById("p1").innerHTML;
+                alert(x);
+                x="This is paragraph AFTER clicking button";
+                document.getElementById("p1").innerHTML=x;
+
+            }
+        </script>
+       
+    </head>
+    <body>
+        <button onclick="button_click()">Click Here</button>
+        <p id="p1">This is paragraph BEFORE clicking button</p>
+        
+    </body>
+</html>

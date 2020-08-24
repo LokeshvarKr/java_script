@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            First Page
+        </title>
+        <script type="text/javascript">
+        function changeStyle(){
+            var para=document.getElementsByTagName('p');
+            
+            for(var i=0;i<para.length;i++){
+                para[i].style.fontSize=25;
+            }
+            para[0].style.fontWeight="bold";
+            para[1].style.color="red";
+            para[2].style.color="afc";
+            para[3].style.fontStyle="italic";
+        }
+        </script>
+       
+    </head>
+    <body>
+        <p id="p1">This is first line</p>
+        <p id="p2">This is second line</p>
+        <p id="p3">This is third line</p>
+        <p id="p4">This is four line</p>
+        <button onclick="changeStyle()">Change Style</button>
+
+    </body>
+</html>

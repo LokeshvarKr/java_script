@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>zoomOut zoomIn in javascript</title>
+        <script type="text/javascript">
+           var width=0; 
+           var difference=10;
+           var intervalID=0;
+           function zoom_out(){
+                if(width>200){
+                    width=width-difference;
+                    document.getElementById("img1").style.width=width;
+                    console.log(width);
+                }
+                else{
+                    clearInterval(intervalID);
+                }
+            }
+           function zoomOut(){
+                clearInterval(intervalID);
+                intervalID=setInterval(zoom_out,30);                
+           }
+           function zoom_in(){
+                if(width<500){
+                    width=width+difference;
+                    document.getElementById("img1").style.width=width;
+                    console.log(width);
+                }
+                else{
+                    clearInterval(intervalID);
+                }
+            }
+           function zoomIn(){
+                clearInterval(intervalID);
+                intervalID=setInterval(zoom_in,30);
+           }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="zoomIn()">zoomIn</button>
+        <br>
+        <img id="img1" src="image/google.png" width="200px"/>
+        <br>
+        <button onclick="zoomOut()">zoomOut</button>
+    </body>
+</html>

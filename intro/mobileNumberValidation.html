@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Regular Expression
+        </title>
+        <script type="text/javascript">
+            function validate(){
+                var mobile=document.getElementById("user").value;
+                // \d ----> 0-9
+                // \w ----> any word character (a-z,A-Z,0-9,&_)
+                // \s ----> for spaces and tabs 
+                // \t ----> for tab only
+
+                // var regx=/[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+                // var regx=/[6-9][0-9]{9}/;
+                var regx=/^[6-9]\d{9}$/;
+                if(regx.test(mobile)){                   
+                    return true;
+                }
+                else{
+                    alert("Invalid Mobile Number");
+                    document.getElementById("userlabel").style.visibility="visible";
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="message.html">
+            <input id="user" type="text" placeholder="Enter Mobile Number" required>
+            <label id="userlabel" style="color:red; visibility: hidden;">Invalid Mobile Number</label>
+            <br><br>
+            <button type="submit" >Submit</button>
+        </form>
+    </body>
+</html>

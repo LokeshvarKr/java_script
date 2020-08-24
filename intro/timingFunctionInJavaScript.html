@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>
+            Timing Function in Java Script
+        </title>
+        <script type="text/javascript">
+        /*
+        setTimeout() -
+        The setTimeout() method calls a function or 
+        evaluates an expression after a specified 
+        number of milliseconds.
+        clearTimeout() -
+        The clearTimeout() method clears a timer set
+        with the setTimeout() method. The ID value 
+        returned by setTimeout() is used as the parameter for the clearTimeout() method.
+        
+        */
+        
+
+    
+        var ID=0;
+        function printMsg1(){
+            document.getElementById("abc").innerHTML="5 Sec have passed";
+        }
+        function start1(){
+            document.getElementById("abc").innerHTML="wait for 5 Sec or u can stop";
+            ID=window.setTimeout(printMsg1,5000);
+        }
+        function stop1(){
+            document.getElementById("abc").innerHTML="Strat Time by clicking above button";
+            window.clearTimeout(ID);
+        }
+        
+
+        /*
+        setInterval() -
+        The setInterval() method calls a function or 
+        evaluates an expression at specified intervals 
+        (in milliseconds). The setInterval() method will 
+        continue calling the function until clearInterval() 
+        is called, or the window is closed. The ID value 
+        returned by setInterval() is used as the parameter 
+        for the clearInterval() method.
+        clearInterval() -
+        The clearInterval() method clears a timer set with 
+        the setInterval() method. The ID value returned by 
+        setInterval() is used as the parameter for the 
+        clearInterval() method.
+        */
+
+        var ID2=0;
+        var second=0;
+        function printMsg2(){
+            document.getElementById("def").innerHTML=second+" Seconds";
+            second++;
+        }
+        function start2(){
+            ID2=window.setInterval(printMsg2,1000);
+        }
+        function stop2(){
+            window.clearInterval(ID2);
+        }
+
+
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <h3 style="color: green;"># setTimeout() and clearTimeout() in javascript</h3>
+            <button onclick="start1()">Start</button>
+            <h4 id="abc" >Strat Time by clicking above button</h4>
+            <button onclick="stop1()">Stop</button>
+        </div>
+        
+        <div>
+            <h3 style="color: green;"># setInterval() and clearInterval() in javascript</h3>
+            <button onclick="start2()">Start</button>
+            <h4 id="def" >Start Seconds</h4>
+            <button onclick="stop2()">Stop</button>
+        </div>
+    </body>
+</html>

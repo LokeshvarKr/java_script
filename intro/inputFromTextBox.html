@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Third Page
+        </title>
+        <script type="text/javascript">
+            function button_click(){
+                // document.getElementById("p1").innerHTML="This is paragraph AFTER clicking button";
+                var x=document.getElementById("user").value;
+                var y=document.getElementById("pass").value;
+                alert("your username is : "+ x + " and password is :"+y);
+            }
+        </script>       
+    </head>
+    <body>
+        <input id ="user" placeholder="username">
+        <br>
+        <input type="password" id="pass" placeholder="password">
+        <br>
+        <button onclick="button_click()">See Result</button>
+    </body>
+</html>

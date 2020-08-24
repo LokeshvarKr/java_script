@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Welcome
+        </title>
+        <script type="text/javascript">
+        function changeStyle(){
+            var para1=document.getElementsByClassName('xyz');
+            var para2=document.getElementsByClassName('abc');
+            
+            for(var i=0;i<para1.length;i++){
+                para1[i].style.fontSize=25;
+                para1[i].style.color='adf';
+                para1[i].style.fontStyle="italic";
+            }
+
+            for(var i=0;i<para2.length;i++){
+                para2[i].style.fontSize=14;
+                para2[i].style.color='aaf';
+            }
+        }
+        </script>
+       
+    </head>
+    <body>
+        <p class="xyz">This is heading line</p>
+        <a class="abc" href="https://www.google.co.in/">Google</a>
+        <p class="abc">This is first line</p>
+        <p class="abc">This is second line</p>
+        <p class="abc">This is third line</p>
+        <p class="abc">This is four line</p>
+        <a class="abc" href="https://www.w3schools.com/html/"">W3school</a>
+        <p class="xyz">This is ending line</p>
+
+        <button onclick="changeStyle()">Change Style</button>
+
+    </body>
+</html>

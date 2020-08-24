@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            First Page
+        </title>
+        <script type="text/javascript">
+        /*    
+            function validate(){
+                var username=document.getElementById("user");
+                var password=document.getElementById("pass");
+                if(username.value.trim()==""){
+                    alert("Username can't be blank");
+                    return false;
+                }
+                else if(password.value.trim().length<6){
+                    alert("password length can't be less than 6");
+                    return false;
+                } 
+                else if(password.value.trim().length>12){
+                    alert("Password length can't be more than 12");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+        */
+
+            function validate(){
+                var username=document.getElementById("user");
+                var password=document.getElementById("pass");
+                if(username.value.trim()==""){
+                    // alert("Username can't be blank");
+                    username.style.border="solid 3px red";
+                    document.getElementById("userlabel").style.visibility="visible";
+                    return false;
+                }
+                else if(password.value.trim().length<6){
+                    alert("password length can't be less than 6");
+                    password.style.border="solid 3px red";
+                    document.getElementById("passlabel").style.visibility="visible";
+                    return false;
+                } 
+                else if(password.value.trim().length>12){
+                    alert("Password length can't be more than 12");
+                    password.style.border="solid 3px red";
+                    document.getElementById("passlabel").style.visibility="visible";
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" action="message.html">
+            Username: <input id="user" type="text" placeholder="Enter Username" required>
+            <label id="userlabel" style="color:red; visibility: hidden;">Invalid Username</label>
+            <br><br>
+            Password: <input id="pass" type="password" placeholder="Enter Password" required>
+            <label id="passlabel" style="color:red; visibility: hidden;">Invalid Password</label>
+            <br><br>
+            <button type="submit" >Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            First Page
+        </title>
+        <script type="text/javascript">
+            function add(){
+               var a=document.getElementById("a").value;
+               var b=document.getElementById("b").value;
+            //    var result=ab; // this line has an error
+               var result=a+b;
+               document.getElementById("result").innerHTML="Result = "+result;
+               console.log(result);
+            }
+        </script>
+    </head>
+    <body>
+        <input id="a" type="text" placeholder="Enter value of A" required>
+        <br><br>
+        <input id="b" type="text" placeholder="Enter value of B" required>
+        <br><br>
+        <button onclick="add()">Add</button>
+        <h4 id="result">Result = </h4>
+    </body>
+</html>

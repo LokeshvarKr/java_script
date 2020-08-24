@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Four Page
+        </title>
+        <script type="text/javascript">
+            function fun(){
+                
+            /*               
+                var x=document.getElementById("sub1");
+                var y=document.getElementById("sub2");
+                var z=document.getElementById("sub3");
+
+                if(x.checked==true){
+                    alert(x.value);
+                }
+                else if(y.checked==true){
+                    alert(y.value);
+                }
+                else if(z.checked==true){
+                    alert(z.value);
+                }
+                else{
+                    alert("No subject is selected");   
+                }
+            */
+   
+                var arr1=document.getElementsByName("abc");
+                var flag=false;
+                for(var i=0;i<arr1.length;i++){
+                    if(arr1[i].checked==true){
+                        alert(arr1[i].value);
+                        flag=true;
+                        break;
+                    }
+                }
+                if(flag==false){
+                    alert("Not selected");
+                }
+
+            }
+        </script>       
+    </head>
+    <body>
+        <input id="sub1"  name="abc" type="radio" value="C++" >C++</input><br>
+        <input id="sub2"  name="abc" type="radio" value="Java" >Java</input><br>
+        <input id="sub3"  name="abc" type="radio" value="Python" >Python</input><br>
+        <button id="btn" onclick="fun()">See Result</button>
+    </body>
+</html>
